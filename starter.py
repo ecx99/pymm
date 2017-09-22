@@ -5,11 +5,8 @@ from subprocess import call, check_call
 
 def internet_status_ok():
     try:
-<<<<<<< HEAD
         check_call(['ping' , '-n', '2', 'www.google.com'])
-=======
-        check_call(['ping' , '-n', '1', 'www.google.com'])
->>>>>>> d0da339025fec53ba582de4871d27ae8f60bbd5d
+
     except:
         return False
 
