@@ -71,7 +71,7 @@ buttons = [
        'pack': {'side': 'left'}, 'font': font}
     , {'bname': 'Google', 'args': [htp + 'google.com'], 'command': [start, chrome], 'bg': 'green', 'bd': n_bd,
        'pack': {'side': 'left'}, 'font': font}
-    , {'bname': 'Weather', 'args': [htp + 'weather.com/weather/today/l/21042:4:US'], 'command': [start, chrome],
+    , {'bname': 'Weather', 'args': [htp + 'forecast.weather.gov/MapClick.php?lat=39.27796080000002&lon=-76.86092919999993#.WcXO_ciGP4Y'], 'command': [start, chrome],
        'bg': 'yellow', 'bd': n_bd, 'pack': {'side': 'left'}, 'font': font}
     , {'bname': 'Off', 'args': ['/s', '/f'], 'command': ['shutdown'], 'bg': 'red', 'bd': n_bd, 'pack': {'side': 'left'},
        'font': font}
