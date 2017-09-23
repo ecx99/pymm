@@ -17,7 +17,10 @@ def doaction( cmd):
 
 class Application(Frame):
 
-
+    def do_search(self,event):
+        search_str=self.str_search.get()
+        call(['cmd','/c','start', 'chrome', 'http://google.com/?q='+search_str])
+        
     def createWidgets(self):
         idx = 0
         for bs in buttons:
@@ -29,6 +32,16 @@ class Application(Frame):
         self.str_intstatus.set("Internet Status")
         self.btn_internet = Button(self,  command=self.set_internet_status    , text='Internet Status' , textvariable=self.str_intstatus)
         self.btn_internet.pack()
+
+
+        self.str_search = StringVar()
+        self.str_search.set("Search")
+        self.entry_search = Entry(self, font=("Calibri", 25, "bold"),style="TButton", text='Search' , textvariable=self.str_search)
+        self.entry_search.pack()
+
+        self.entry_search.bind('<Key-Return>',
+                              self.do_search)
+
 
     def set_internet_status(self):
         if internet_status_ok() is False:
@@ -70,7 +83,7 @@ root = Tk()
 #root.geometry("1024x768")
 # root.attributes('-fullscreen', True)
 style = Style()
-style.configure("TButton", padding=6, relief="flat", font=("Calibri", 25, "bold"),   background="#ccc")
+style.configure("TButton", padding=6, relief="ridge", font=("Calibri", 25, "bold"),   background="#ccc")
 
 app = Application(master=root)
 app.mainloop()
