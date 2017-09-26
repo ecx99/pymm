@@ -1,0 +1,56 @@
+[
+ {
+ "bd": 10,
+ "bg": "green",
+ "args": [ "http://hulu.com/kids" ],
+ "bname": "Hulu",
+ "command": [ "start", "chrome" ]
+ },
+ {
+ "bd": 10,
+ "bg": "blue",
+ "args": [ "http://youtube.com" ],
+ "bname": "Youtube",
+ "command": [ "start", "chrome" ]  
+ },
+ {
+ "bd": 10,
+ "bg": "orange",
+ "args": [
+ "http://netflix.com"
+ ],
+ "bname": "Netflix",
+ "command": [
+ "start", "chrome" ]
+ },
+ {
+ "bd": 10,
+ "bg": "green",
+ "args": [ "http://google.com" ],
+ "bname": "Google",
+ "command": [
+ "start", "chrome" ]
+ },
+ {
+ "bd": 10,
+ "bg": "yellow",
+ "args": [ "http://forecast.weather.gov/MapClick.php?lat=39.27796080000002&lon=-76.86092919999993#.WcXO_ciGP4Y" ],
+ "bname": "Weather",
+ "command": [
+ "start", "chrome" ]
+ },
+ {
+ "bd": 10,
+ "bg": "red",
+ "args": [ "/s", "/f" ],
+ "bname": "Off",
+ "command": [ "shutdown" ]
+ },
+ {
+ "bd": 10,
+ "bg": "red",
+ "args": [ "/r", "/f" ],
+ "bname": "Restart",
+ "command": [ "shutdown" ]
+ }
+]

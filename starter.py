@@ -1,6 +1,6 @@
 from Tkinter import *
 from ttk import *
-import time
+import time, json,os
 from subprocess import call, check_call
 
 def internet_status_ok():
@@ -58,26 +58,9 @@ class Application(Frame):
 
 
 n_bd = 10
-htp = 'http://'
-font = ("Arial", 25, "bold")
-start = 'start'
-chrome = 'chrome'
-buttons = [
-    {'bname': 'Hulu', 'args': [htp + 'hulu.com/kids'], 'command': [start, chrome], 'bg': 'green', 'bd': n_bd,
-     'pack': {'side': 'left'}, 'font': font}
-    , {'bname': 'Youtube', 'args': [htp + 'youtube.com'], 'command': [start, chrome], 'bg': 'blue', 'bd': n_bd,
-       'pack': {'side': 'left'}, 'font': font}
-    , {'bname': 'Netflix', 'args': [htp + 'netflix.com'], 'command': [start, chrome], 'bg': 'orange', 'bd': n_bd,
-       'pack': {'side': 'left'}, 'font': font}
-    , {'bname': 'Google', 'args': [htp + 'google.com'], 'command': [start, chrome], 'bg': 'green', 'bd': n_bd,
-       'pack': {'side': 'left'}, 'font': font}
-    , {'bname': 'Weather', 'args': [htp + 'forecast.weather.gov/MapClick.php?lat=39.27796080000002&lon=-76.86092919999993#.WcXO_ciGP4Y'], 'command': [start, chrome],
-       'bg': 'yellow', 'bd': n_bd, 'pack': {'side': 'left'}, 'font': font}
-    , {'bname': 'Off', 'args': ['/s', '/f'], 'command': ['shutdown'], 'bg': 'red', 'bd': n_bd, 'pack': {'side': 'left'},
-       'font': font}
-    , {'bname': 'Restart', 'args': ['/r', '/f'], 'command': ['shutdown'], 'bg': 'red', 'bd': n_bd,
-       'pack': {'side': 'left'}, 'font': font}
-]
+os.chdir(os.path.dirname(sys.argv[0]))
+f=open('./config.json')
+buttons = json.load(f)
 
 root = Tk()
 #root.geometry("1024x768")
