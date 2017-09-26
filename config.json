@@ -34,7 +34,7 @@
  {
  "bd": 10,
  "bg": "yellow",
- "args": [ "http://forecast.weather.gov/MapClick.php?lat=39.27796080000002&lon=-76.86092919999993#.WcXO_ciGP4Y" ],
+ "args": [ "https://weather.com/weather/5day/l/21042:4:US" ],
  "bname": "Weather",
  "command": [
  "start", "chrome" ]
