@@ -1,56 +1,47 @@
-[
- {
- "bd": 10,
- "bg": "green",
- "args": [ "http://hulu.com/kids" ],
- "bname": "Hulu",
- "command": [ "start", "chrome" ]
- },
- {
- "bd": 10,
- "bg": "blue",
- "args": [ "http://youtube.com" ],
- "bname": "Youtube",
- "command": [ "start", "chrome" ]  
- },
- {
- "bd": 10,
- "bg": "orange",
- "args": [
- "http://netflix.com"
- ],
- "bname": "Netflix",
- "command": [
- "start", "chrome" ]
- },
- {
- "bd": 10,
- "bg": "green",
- "args": [ "http://google.com" ],
- "bname": "Google",
- "command": [
- "start", "chrome" ]
- },
- {
- "bd": 10,
- "bg": "yellow",
- "args": [ "https://weather.com/weather/5day/l/21042:4:US" ],
- "bname": "Weather",
- "command": [
- "start", "chrome" ]
- },
- {
- "bd": 10,
- "bg": "red",
- "args": [ "/s", "/f" ],
- "bname": "Off",
- "command": [ "shutdown" ]
- },
- {
- "bd": 10,
- "bg": "red",
- "args": [ "/r", "/f" ],
- "bname": "Restart",
- "command": [ "shutdown" ]
- }
-]
+{
+    "check_internet_button" : "off",
+	"main_style" : { "padding" : 2, "relief": "ridge", "font":"Calibri", "fontsize" :25, "fontstyle": "bold",  "background":"#ccc" },
+	"buttons" : [
+			 {
+
+			 "args": [ "http://hulu.com/kids" ],
+			 "bname": "Hulu",
+			 "command": [ "start", "chrome" ]
+			 },
+			 {
+
+			 "args": [ "http://youtube.com" ],
+			 "bname": "Youtube",
+			 "command": [ "start", "chrome" ]  
+			 },
+			 {
+
+			 "args": [ "http://netflix.com" ],
+			 "bname": "Netflix",
+			 "command": [ "start", "chrome" ]
+			 },
+			 {
+			 "args": [ "http://google.com" ],
+			 "bname": "Google",
+			 "command": [ "start", "chrome" ]
+			 },
+			 {
+			 "args": [ "https://weather.com/weather/5day/l/21042:4:US" ],
+			 "bname": "Weather",
+			 "command": [ "start", "chrome" ]
+			 },
+			 {
+			 "args": [ "/s", "/f" ],
+			 "bname": "Off",
+			 "command": [ "shutdown" ]
+			 },
+			 {
+			 "args": [ "/r", "/f" ],
+			 "bname": "Restart",
+			 "command": [ "shutdown" ]
+			 }
+			]
+
+}
+
+
