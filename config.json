@@ -1,6 +1,6 @@
 {
     "check_internet_button" : "on",
-	"main_style" : { "padding" : 2, "relief": "ridge", "font":"Calibri", "fontsize" :25, "fontstyle": "bold",  "background":"#ccc" },
+	"main_style" : { "padding" : 2, "relief": "ridge", "font":"Calibri", "fontsize" :35, "fontstyle": "bold",  "background":"#ccc" },
 	"buttons" : [
 			 {
 

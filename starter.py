@@ -57,6 +57,7 @@ class Application(Frame):
 os.chdir(os.path.dirname(sys.argv[0]))
 f=open('./config.json')
 config_json = json.load(f)
+f.close()
 buttons =config_json['buttons']
 main_style = config_json['main_style']
 print buttons
