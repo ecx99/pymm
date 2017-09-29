@@ -30,12 +30,14 @@ class Application(Frame):
         if config_json['check_internet_button'] == "on":
             self.str_intstatus = StringVar()
             self.str_intstatus.set("Internet Status")
-            self.btn_internet = Button(self,  command=self.set_internet_status    , text='Internet Status' , textvariable=self.str_intstatus)
+            self.btn_internet = Button(self,  command=self.set_internet_status
+                                       , text='Internet Status' , textvariable=self.str_intstatus)
             self.btn_internet.pack()
 
         self.str_search = StringVar()
         self.str_search.set("Search")
-        self.entry_search = Entry(self, font=(main_style['font'], main_style['fontsize'], main_style['fontstyle']),style="TButton", text='Search' , textvariable=self.str_search)
+        self.entry_search = Entry(self, font=(main_style['font'], main_style['fontsize'],
+                                              main_style['fontstyle']),style="TButton", text='Search' , textvariable=self.str_search)
         self.entry_search.pack()
 
         self.entry_search.bind('<Key-Return>',self.do_search)
@@ -60,13 +62,14 @@ config_json = json.load(f)
 f.close()
 buttons =config_json['buttons']
 main_style = config_json['main_style']
-print buttons
+#print buttons
 
 root = Tk()
 #root.geometry("1024x768")
 # root.attributes('-fullscreen', True)
 style = Style()
-
+print style.theme_names()
+style.theme_use('vista')
 
 style.configure("TButton", padding=main_style['padding'], relief=main_style['relief'], font=(main_style['font'], main_style['fontsize'], main_style['fontstyle']),   background=main_style['background'])
 
