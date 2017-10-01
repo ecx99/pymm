@@ -5,7 +5,7 @@
 			 {
 
 			 "args": [ "http://hulu.com/kids" ],
-			 "bname": "Hulu",
+			 "bname": "Hulu Kids",
 			 "command": [ "start", "chrome" ]
 			 },
 			 {
