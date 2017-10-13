@@ -2,6 +2,13 @@
     "check_internet_button" : "on",
 	"main_style" : { "padding" : 2, "relief": "ridge", "font":"Calibri", "fontsize" :35, "fontstyle": "bold",  "background":"#ccc" },
 	"buttons" : [
+{
+
+			 "args": [ "http://hulu.com/" ],
+			 "bname": "Hulu",
+			 "command": [ "start", "chrome" ]
+			 },
+
 			 {
 
 			 "args": [ "http://hulu.com/kids" ],
