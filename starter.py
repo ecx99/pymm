@@ -29,7 +29,6 @@ class Application(Frame):
         self.config_json=getConfig()
         self.myStyle = Style()
         self.myStyle.configure('TButton',font=(self.config_json['font_name'], self.config_json['font_size']))
-        self.myStyle.configure('TText',font=(self.config_json['font_name'], self.config_json['font_size']))
         self.buttons=self.config_json['buttons']
         self.grid()
         self.createWidgets()
