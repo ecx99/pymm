@@ -29,6 +29,7 @@ class Application(Frame):
         self.config_json=getConfig()
         self.myStyle = Style()
         self.myStyle.configure('TButton',font=(self.config_json['font_name'], self.config_json['font_size']))
+        self.myStyle.configure('TText',font=(self.config_json['font_name'], self.config_json['font_size']))
         self.buttons=self.config_json['buttons']
         self.grid()
         self.createWidgets()
@@ -101,14 +102,15 @@ class Application(Frame):
 
         if self.config_json['my_notes_widget_on_off'] == 'on':
             row_num+=1
-            scroll = Scrollbar(self)
-            self.my_notes_box = Text(self,  yscrollcommand=scroll.set)
-            self.my_notes_box.tag_configure('myfont',font=(self.config_json['font_name'], self.config_json['font_size']))
+            self.scroll = Scrollbar(self)
+            
+            self.my_notes_box = Text(self,  yscrollcommand=self.scroll.set,width=45,relief='sunken',font=(self.config_json['font_name'], self.config_json['font_size']))
             self.my_notes_box.insert('1.0',self.get_my_notes())
             self.my_notes_box.bind('<Key-Return>',self.write_my_notes)
-            self.my_notes_box.grid(row=row_num,column=0,columnspan=self.config_json['max_buttons_per_row'])
-            scroll.config(command = self.my_notes_box.yview)
-            scroll.grid(row=row_num,columnspan=self.config_json['max_buttons_per_row'])
+            self.my_notes_box.grid(row=row_num,column=0,columnspan=self.config_json['max_buttons_per_row']-1,sticky='w')
+            self.scroll.grid(row=row_num,column=self.config_json['max_buttons_per_row']-1,sticky='w')
+            self.scroll.config(command = self.my_notes_box.yview)
+            
 
     def set_internet_status(self):
         if internet_status_ok() is False:
