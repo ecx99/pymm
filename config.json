@@ -3,9 +3,9 @@
 	"my_notes_widget_on_off" : "on",
 	"font_size" : 14,
 	"font_name" : "Courier New",
-	"max_buttons_per_row" : 5,
+	"max_buttons_per_row" : 4,
 	"my_notes_folder" : ".\\my_notes",
-	
+	"button_width" : 15,
 	"buttons" : [
 	{
 	 "bname": "Magnify",
@@ -26,8 +26,8 @@
 	 "command": ["C:\\Program Files (x86)\\Cisco\\Cisco AnyConnect Secure Mobility Client\\vpnui.exe" ]
 	 }
 ,	 {
-	 "bname": "Stop",
-	 "command": ["start","shutdown", "/s","/t","6" ]
+	 "bname": "Stop Comp",
+	 "command": ["start","powershell", "Stop-Computer", "-confirm" ]
 	 }
 	 ,	 {
 		"bname": "CMD",
