@@ -6,6 +6,8 @@
 	"max_buttons_per_row" : 4,
 	"my_notes_folder" : ".\\my_notes",
 	"button_width" : 15,
+	"notes_box_height" : 10,
+	"notes_box_width" : 45,
 	"buttons" : [
 	{
 	 "bname": "Magnify",
@@ -29,10 +31,14 @@
 	 "bname": "Stop Comp",
 	 "command": ["start","powershell", "Stop-Computer", "-confirm" ]
 	 }
-	 ,	 {
+,	 {
 		"bname": "CMD",
 		"command": [ "start","cmd" ]
-		}
-   
+	}
+	,	 {
+		"bname": "Browser",
+		"command": [ "start","chrome" ]
+	}
+	
 	]
 }
