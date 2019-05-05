@@ -1,7 +1,7 @@
 {
 	"check_internet_button_on_off" : "on",
 	"my_notes_widget_on_off" : "on",
-	"font_size" : 14,
+	"font_size" : 16,
 	"font_name" : "Courier New",
 	"max_buttons_per_row" : 4,
 	"my_notes_folder" : ".\\my_notes",
