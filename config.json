@@ -1,47 +1,38 @@
 {
-    "check_internet_button" : "on",
-	"main_style" : { "padding" : 2, "relief": "ridge", "font":"Calibri", "fontsize" :35, "fontstyle": "bold",  "background":"#ccc" },
+	"check_internet_button_on_off" : "on",
+	"my_notes_widget_on_off" : "on",
+	"font_size" : 14,
+	"font_name" : "Courier New",
+	"max_buttons_per_row" : 5,
+	"my_notes_folder" : ".\\my_notes",
+	
 	"buttons" : [
-			 {
+	{
+	 "bname": "Magnify",
+	 "command": [ "start", "magnify","/lens" ]
+	 }
+,	 {
+	 "bname": "Dossier",
+	 "command": [ "start","%HOMEPATH%/Documents" ]
+	 }
+,	 {
 
-			 "args": [ "http://hulu.com/kids" ],
-			 "bname": "Hulu Kids",
-			 "command": [ "start", "chrome" ]
-			 },
-			 {
+	 "bname": "PUTTY",
+	 "command": ["start","./putty.exe" ]
+	 }
+,	 {
 
-			 "args": [ "http://youtube.com" ],
-			 "bname": "Youtube",
-			 "command": [ "start", "chrome" ]  
-			 },
-			 {
-
-			 "args": [ "http://netflix.com" ],
-			 "bname": "Netflix",
-			 "command": [ "start", "chrome" ]
-			 },
-			 {
-			 "args": [ "http://google.com" ],
-			 "bname": "Google",
-			 "command": [ "start", "chrome" ]
-			 },
-			 {
-			 "args": [ "https://weather.com/weather/5day/l/21042:4:US" ],
-			 "bname": "Weather",
-			 "command": [ "start", "chrome" ]
-			 },
-			 {
-			 "args": [ "/s", "/f" ],
-			 "bname": "Off",
-			 "command": [ "shutdown" ]
-			 },
-			 {
-			 "args": [ "/r", "/f" ],
-			 "bname": "Restart",
-			 "command": [ "shutdown" ]
-			 }
-			]
-
+	 "bname": "VPN",
+	 "command": ["C:\\Program Files (x86)\\Cisco\\Cisco AnyConnect Secure Mobility Client\\vpnui.exe" ]
+	 }
+,	 {
+	 "bname": "Stop",
+	 "command": ["start","shutdown", "/s","/t","6" ]
+	 }
+	 ,	 {
+		"bname": "CMD",
+		"command": [ "start","cmd" ]
+		}
+   
+	]
 }
-
-
